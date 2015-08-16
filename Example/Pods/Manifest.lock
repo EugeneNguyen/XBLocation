@@ -1,0 +1,21 @@
+PODS:
+  - FBSnapshotTestCase (2.0.3):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.3)
+  - FBSnapshotTestCase/Core (2.0.3)
+  - FBSnapshotTestCase/SwiftSupport (2.0.3):
+    - FBSnapshotTestCase/Core
+  - XBLocation (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - XBLocation (from `../`)
+
+EXTERNAL SOURCES:
+  XBLocation:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: d0eeca6bf87958e088b254396ae66873f971cfb1
+  XBLocation: ef12d63762c70120d4136b1eec9c1c3d1afac136
+
+COCOAPODS: 0.38.2

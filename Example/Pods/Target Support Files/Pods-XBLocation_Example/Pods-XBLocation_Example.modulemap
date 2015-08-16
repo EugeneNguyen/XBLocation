@@ -1,0 +1,6 @@
+framework module Pods_XBLocation_Example {
+  umbrella header "Pods-XBLocation_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

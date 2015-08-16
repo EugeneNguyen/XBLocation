@@ -1,0 +1,6 @@
+framework module XBLocation {
+  umbrella header "XBLocation-umbrella.h"
+
+  export *
+  module * { export * }
+}
