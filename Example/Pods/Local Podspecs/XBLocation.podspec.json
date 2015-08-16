@@ -21,5 +21,9 @@
     "XBLocation": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "frameworks": [
+    "UIKit",
+    "CoreLocation"
+  ]
 }

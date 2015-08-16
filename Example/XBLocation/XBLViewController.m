@@ -7,6 +7,7 @@
 //
 
 #import "XBLViewController.h"
+#import "XBLocation.h"
 
 @interface XBLViewController ()
 
@@ -17,7 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [XBLocation registerLocation];
+    [self handleLocation:@selector(locationDidChange)];
+}
+
+- (void)locationDidChange
+{
+    NSLog(@"%f %f", [XBLocation currentLocation].coordinate.latitude, [XBLocation currentLocation].coordinate.longitude);
 }
 
 - (void)didReceiveMemoryWarning

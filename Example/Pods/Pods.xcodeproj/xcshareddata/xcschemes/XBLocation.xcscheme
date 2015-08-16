@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "11F0915E8C7C9FF82BF3B74F"
+               BlueprintIdentifier = "39388B53D42AC963FB92AC1F"
                BuildableName = "XBLocation.framework"
                BlueprintName = "XBLocation"
                ReferencedContainer = "container:Pods.xcodeproj">
