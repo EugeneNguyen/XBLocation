@@ -105,8 +105,8 @@ static XBLocation *__sharedXBLocation = nil;
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"XBLocationDidChangeLocation" object:nil];
     _currentLocation = [locations lastObject];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"XBLocationDidChangeLocation" object:nil];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -122,6 +122,16 @@ static XBLocation *__sharedXBLocation = nil;
 - (CLLocation *)currentLocation
 {
     return _currentLocation;
+}
+
++ (CGFloat)distanceToLat:(CGFloat)lat lng:(CGFloat)lng
+{
+    if (![XBLocation currentLocation])
+    {
+        return  -1;
+    }
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:lat longitude:lng];
+    return [[XBLocation currentLocation] distanceFromLocation:location];
 }
 
 

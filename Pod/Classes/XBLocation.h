@@ -18,5 +18,6 @@
 + (instancetype)sharedInstance;
 + (void)registerLocation;
 + (CLLocation *)currentLocation;
++ (CGFloat)distanceToLat:(CGFloat)lat lng:(CGFloat)lng;
 
 @end

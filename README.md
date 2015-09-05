@@ -9,6 +9,37 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## How to use
+
+1. Import XBLocation.h where you want to use location function
+
+```obj-c
+#import "XBLocation.h"
+```
+
+2. Start location service
+
+```objc-c
+[XBLocation registerLocation];
+```
+
+3. Add handle of location 
+
+```obj-c
+[self handleLocation:@selector(locationDidChange)];
+
+// and
+
+- (void)locationDidChange
+{
+    NSLog(@"%f %f", [XBLocation currentLocation].coordinate.latitude, [XBLocation currentLocation].coordinate.longitude);
+}
+
+// or you can use current location everywhere 
+[XBLocation currentLocation];
+
+```
+
 ## Requirements
 
 ## Installation
