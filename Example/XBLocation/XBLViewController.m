@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
     [XBLocation registerLocation];
+    
     [self handleLocation:@selector(locationDidChange)];
 }
 

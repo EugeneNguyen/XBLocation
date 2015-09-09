@@ -16,11 +16,14 @@ static XBLocation *__sharedXBLocation = nil;
     CLLocation * _currentLocation;
 }
 
+@property (nonatomic, assign) BOOL hasLocationInformation;
+
 - (void)registerLocation;
 
 @end
 
 @implementation XBLocation
+@synthesize hasLocationInformation = _hasLocationInformation;
 
 + (instancetype)sharedInstance
 {
@@ -106,6 +109,7 @@ static XBLocation *__sharedXBLocation = nil;
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     _currentLocation = [locations lastObject];
+    _hasLocationInformation = YES;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"XBLocationDidChangeLocation" object:nil];
 }
 
@@ -117,6 +121,11 @@ static XBLocation *__sharedXBLocation = nil;
 + (CLLocation *)currentLocation
 {
     return [[XBLocation sharedInstance] currentLocation];
+}
+
++ (BOOL)hasLocationInformation
+{
+    return [[XBLocation sharedInstance] hasLocationInformation];
 }
 
 - (CLLocation *)currentLocation

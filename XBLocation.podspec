@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "XBLocation"
-  s.version          = "1.0.0.1
+  s.version          = "1.0.1
   s.summary          = "Powerful tool for gathering location"
 
 # This description is used to generate tags and improve search results.

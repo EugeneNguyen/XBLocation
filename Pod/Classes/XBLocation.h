@@ -16,7 +16,9 @@
 }
 
 + (instancetype)sharedInstance;
+
 + (void)registerLocation;
++ (BOOL)hasLocationInformation;
 + (CLLocation *)currentLocation;
 + (CGFloat)distanceToLat:(CGFloat)lat lng:(CGFloat)lng;
 
